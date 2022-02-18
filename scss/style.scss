@@ -10,7 +10,13 @@ a {
 }
 
 .main {
-	display: flex;
+	display: grid;
+	grid-template-columns: 300px 1fr;
+}
+
+.link {
+	color: white;
+	margin: 0 3.3px;
 }
 
 .container {
@@ -20,42 +26,50 @@ a {
 	align-items: center;
 }
 
-.navigation-box {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+.aside {
+	position: relative;
+	top: 0;
 
-	background-color: #2d3e4f;
-	.logo {
-		font-size: 30px;
-		font-style: normal;
-		font-weight: normal;
-		line-height: 25px;
-
-		text-transform: uppercase;
-
-		color: #cf404d;
-		margin: 0 95px;
-	}
-	.navbar {
+	.navigation-box {
+		position: fixed;
+		top: 0;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: space-around;
+		background-color: #2d3e4f;
+		padding: 0 85px;
+		.logo {
+			font-size: 30px;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 25px;
 
-		&__item {
 			text-transform: uppercase;
-			text-decoration: none;
-			margin: 40px 0;
-			color: white;
-			&:hover {
-				color: #cf404d;
+
+			color: #cf404d;
+			cursor: pointer;
+		}
+		.navbar {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&__item {
+				text-transform: uppercase;
+				text-decoration: none;
+				margin: 40px 0;
+				color: white;
+				&:hover {
+					color: #cf404d;
+				}
 			}
 		}
-	}
-	.social__links {
-		display: flex;
-		list-style-type: none;
+		.social__links {
+			display: flex;
+			list-style-type: none;
+		}
 	}
 }
 
@@ -220,5 +234,65 @@ section {
 				}
 			}
 		}
+	}
+}
+
+.section-contact {
+	background-color: #fafafa;
+	height: 60vh;
+	form {
+		display: flex;
+		flex-direction: column;
+		margin-top: 60px;
+		.input__box {
+			margin-bottom: 17px;
+			input {
+				padding: 15px 30px;
+				border: none;
+				border-radius: 3px;
+				&:nth-child(1) {
+					margin-right: 20px;
+				}
+			}
+		}
+		.textarea {
+			padding: 20px 30px;
+			border: none;
+			border-radius: 3px;
+		}
+		.form__btn {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 21px;
+
+			border: none;
+			border-radius: 5px;
+
+			margin-top: 17px;
+			padding: 15px 22px;
+
+			color: white;
+			background-color: #cf404d;
+
+			cursor: pointer;
+
+			transition: all 0.3s;
+			&:hover {
+				box-shadow: 0px 2px 3px black;
+			}
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__title {
+		margin: 25px 0;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(0, 0, 0, 0.74);
 	}
 }
