@@ -102,6 +102,17 @@ a {
   list-style-type: none;
 }
 
+.aside .navigation-box .social__links .link {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.aside .navigation-box .social__links .link:hover {
+  color: #cf404d;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 .content {
   width: 100%;
 }

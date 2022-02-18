@@ -1,3 +1,5 @@
+$color-primary: #cf404d;
+
 * {
 	font-family: Oswald;
 	box-sizing: border-box;
@@ -48,7 +50,7 @@ a {
 
 			text-transform: uppercase;
 
-			color: #cf404d;
+			color: $color-primary;
 			cursor: pointer;
 		}
 		.navbar {
@@ -62,13 +64,20 @@ a {
 				margin: 40px 0;
 				color: white;
 				&:hover {
-					color: #cf404d;
+					color: $color-primary;
 				}
 			}
 		}
 		.social__links {
 			display: flex;
 			list-style-type: none;
+			.link {
+				transition: all 0.3s;
+				&:hover {
+					color: $color-primary;
+					transform: scale(1.5);
+				}
+			}
 		}
 	}
 }
@@ -111,10 +120,10 @@ section {
 
 	transition: all 0.3s;
 	&:hover {
-		border: 2px solid #cf404d;
+		border: 2px solid $color-primary;
 		box-shadow: 0px 2px 3px black;
 
-		background-color: #cf404d;
+		background-color: $color-primary;
 	}
 }
 
@@ -189,7 +198,7 @@ section {
 				color: rgba(0, 0, 0, 0.74);
 			}
 			&__link {
-				color: #cf404d;
+				color: $color-primary;
 				transition: all 0.5s;
 				&:hover {
 					transform: scale(2, 1);
@@ -200,7 +209,7 @@ section {
 	}
 	.section-info {
 		height: 135px;
-		background-color: #cf404d;
+		background-color: $color-primary;
 		padding: 0;
 		.container {
 			height: 100%;
@@ -274,7 +283,7 @@ section {
 			padding: 15px 22px;
 
 			color: white;
-			background-color: #cf404d;
+			background-color: $color-primary;
 
 			cursor: pointer;
 
