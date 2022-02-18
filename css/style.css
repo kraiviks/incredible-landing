@@ -297,9 +297,11 @@ section {
 .section-lightbox .cards .card img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  opacity: 0.5;
 }
 
 .section-lightbox .cards .card img:hover {
+  opacity: 1;
   -webkit-box-shadow: 1px 1px 15px #2d3e4f;
           box-shadow: 1px 1px 15px #2d3e4f;
   -webkit-transform: scale(1.3) translate(0%, -15%);
