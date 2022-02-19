@@ -467,5 +467,8 @@ section {
   .input__box input:nth-child(1) {
     margin: 0 0 10px 0 !important;
   }
+  section {
+    padding: 100px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
